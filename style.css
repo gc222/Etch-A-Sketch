@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background: rgb(235, 235, 235);
+}
+
+/* 
+800x800 container 
+16 50px grid-items
+*/
+
+#wizard {
+    margin: auto;
+    background: black;
+    
+}
+
+#grid-container {
+    margin: auto;
+    background: grey;
+    width: 480px;
+    height: 480px;
+
+    display: grid;
+    grid-template-columns: repeat(16, 1fr);
+    /* shadow: horizontal | vertical | blur | spread | colour */
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+}
+
+.grid-item {
+    background: white;
+    /* outline: 1px solid red; */
+}
+
