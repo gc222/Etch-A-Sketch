@@ -10,6 +10,13 @@ for ( let i = 0; i < gridSize; i++ ) {
 
     gridContainer.appendChild(cell);
 
-    
+    cell.addEventListener("mouseover", () => {
+        cell.style.background = "yellow";
+        console.log("change-colour");
+    });
+
+    cell.addEventListener("mouseout", () => {
+        // cell.style.background = "white";
+    });
 }
 
