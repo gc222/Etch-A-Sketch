@@ -2,39 +2,107 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     min-height: 100vh;
-    display: flex;
-    background: rgb(235, 235, 235);
+    background: rgb(244, 211, 94);
 }
 
-/* 
-800x800 container 
-16 50px grid-items
-*/
+#etch {
+    font-size: 4em;
+    margin: 10vh 0 5vh 0;
+    text-align: center;
+    /* color: rgb(193, 223, 31); */
+}
 
-#wizard {
-    margin: auto;
+#main {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    /* justify-content */
+    gap: 30px;
+}
+
+#controls {
+    width: 180px;
+    background: #7FBCD2;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px;  
+    border-radius: 10px;
+    box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
+    border: 2px solid;
+}
+
+#controls > * {
+    margin: 15px 0;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    width: 100%;
+    border-radius: 60px;
+
+}
+
+button {
+    cursor: pointer;
+    padding: 5px;
+}
+
+button:hover {
     background: black;
-    
+    color: white;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+#slider {
+    width: 100%;
+}
+
+/* slider background */
+input[type="range"] {
+    /* change appearance to none as it has a default design*/
+    -webkit-appearance: none;
+    height: 10px;
+    background: white;
+    border-radius: 5px;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: black;
+}
+
+#slider-value {
+    font-size: 18px;
 }
 
 #grid-container {
-    margin: auto;
     background: grey;
-    width: 480px;
-    height: 480px;
+    width: 600px;
+    height: 600px;
+    border: 1px solid;
 
     display: grid;
-    grid-template-columns: repeat(16, 1fr);
     /* shadow: horizontal | vertical | blur | spread | colour */
     box-shadow: 0px 7px 29px 0px rgba(100, 100, 111, 0.2);
 }
 
-.grid-item {
+#grid-container .grid-item {
     background: white;
-    /* outline: 1px solid red; */
 }
 
